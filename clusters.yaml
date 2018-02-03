@@ -1,0 +1,7 @@
+- alias: hasura
+  config:
+    configmap: controller-conf
+    namespace: barbell83-hasura
+  data: null
+  kubeContext: barbell83
+  name: barbell83
