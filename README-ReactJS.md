@@ -11,7 +11,7 @@ Condition - it extracts the medical condition such as fever,cold,malaria etc.
 
 Drug - it extracts the name of drug mentioned in user query such as aspirin,tetracyclines,etc.
 ## How it works 
-#### Workfolw Overview
+#### Workflow Overview
 When a user type  any Query related to health issues in input box and click on ask button it 
 provides the user with the appropriate answer available for that query . 
 #### Internal Working
@@ -57,6 +57,7 @@ $  hasura quickstart hasura/hello-react
 6.Run ``` hasura cluster status  ```to find your cluster name.
   
   Now  it all set. You can check the bot functionality in action in your workspace.
+
 7.## How to build on top of this?
 The frontend is written in  Reactjs . The source code lies in microservices/api/app/src directory where u can modify code .
 Then Commit the changes, and perform git push hasura master to deploy the changes.
