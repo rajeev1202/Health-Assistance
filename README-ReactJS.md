@@ -36,11 +36,33 @@ $hasura login
 ```
 This command will open up the browser and allow you to register with a new account (or login to your existing account).
 Find complete documentation [here](https://docs.hasura.io/0.15/manual/tutorial/2-hasura-project.html).
+
 3.Then run
 ```
 $  hasura quickstart hasura/hello-react
 
 ```
  or u can clone and deploy it from [here](https://hasura.io/hub/project/hasura/hello-react/deployment-instructions) .
- 4.Then 
+ 
+ 4.Then copy then go to /microservices/ui/app/src and replace it by code present in /microservices/ui/app/src if this Repository
+   I will soon provide Quickstart for this project .
+
+5.Now Run
+  ```
+  git add .
+  git commit  and 
+  git push hasura master.
+  ```
+  
+6.Run ``` hasura cluster status  ```to find your cluster name.
+  
+  Now  it all set. You can check the bot functionality in action in your workspace.
+7.## How to build on top of this?
+The frontend is written in  Reactjs . The source code lies in microservices/api/app/src directory where u can modify code .
+Then Commit the changes, and perform git push hasura master to deploy the changes.
+You can Find Backend Code and documentation [here](https://github.com/akshatha-s13/witapp).
+
+## Support
+
+If you  get stuck anywhere, please mail me at talegarry1202@gmail.com. Alternatively, if you find a bug, you can raise an issue [here](https://github.com/rajeev1202/Health-Assistant-bot/issues).
 
