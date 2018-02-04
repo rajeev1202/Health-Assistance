@@ -54,11 +54,11 @@ $  hasura quickstart hasura/hello-react
   git push hasura master.
   ```
   
-6.Run ``` hasura cluster status  ```to find your cluster name.
+6. Run ``` hasura cluster status  ```to find your cluster name.
   
   Now  it all set. You can check the bot functionality in action in your workspace.
 
-7.## How to build on top of this?
+##  How to build on top of this?
 The frontend is written in  Reactjs . The source code lies in microservices/api/app/src directory where u can modify code .
 Then Commit the changes, and perform git push hasura master to deploy the changes.
 You can Find Backend Code and documentation [here](https://github.com/akshatha-s13/witapp).
