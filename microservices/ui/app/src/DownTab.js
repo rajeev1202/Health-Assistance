@@ -12,6 +12,8 @@ import FlatButton from 'material-ui/FlatButton';
  import RaisedButton from 'material-ui/RaisedButton';
  import SearchBar from 'material-ui-search-bar'
 import axios from "axios";
+import Paper from 'material-ui/Paper';
+	
 	
 	export class DownTab extends React.Component {
 		constructor(){
@@ -22,41 +24,54 @@ import axios from "axios";
 		}
 		this.updateState = this.updateState.bind(this);
 		this.writeState = this.writeState.bind(this);
-		this.apiRequest=this.apiRequest.bind(this);
+		this.componentDidMount=this.componentDidMount.bind(this);
 		};
 		updateState(e){
 			this.setState({line:e.target.value});
-			
+			 
 		}
            writeState()
 		{
-			if(this.state.text != ""){
+			if(this.state.line != ""){
 				
-				this.apiRequest(this.state.line);
-		
+				this.componentDidMount();
+              	  
 			}
 		
 		}
-		apiRequest (){
-		 axios .post("https://api.beady27.hasura-app.io/wit",{Input:this.state.line})
+		
+		
+		componentDidMount()
+		{
+			axios .post("https://api.beady27.hasura-app.io/wit",{Input:this.state.line})
 		 
 		 .then(response => {
-			 this.setstate({line: this.state({text:response.data.response}),
-			 text:"",
-		      
-		 
-			 });
+			  console.log(response.data);
+			  var rr = JSON.stringify(response.data);
+			  
+			 
+			 document.getElementById("hello").innerHTML=rr;
+		
+			 
+			 this.setstate({line: response.data});
+              
 		 })
+		 		 
 		 .catch(error =>{
 			 this.setState({
 				 dummy:'error man'
 		 })
 		 });
 	 }
+		
 		render()
 		{
+		
 			return(
 			<div>
+			 
+			
+			
 			<div style={{ hight:60,backgroundColor:'#80CBC4',}} >
     <div
 	 containerStyle={{backgroundColor:'orange'}}
@@ -72,28 +87,29 @@ import axios from "axios";
 </div>
  </div>
  <div style={{marginTop:'15%',marginLeft:'40%'}}>
-<input    type = "text" value = {this.state.line} 
+
+ <input    type = "text" value = {this.state.line} 
                onChange = {this.updateState}
 style={{
 maxWidth: '100%',height:'35px',paddingLeft:'100px',}}/>
-           
-      
+         
+   
 		
-        
-
-	<div  style={{marginTop:'-4.6%',paddingLeft:'35%',}}
-	buttonstyle={{heigth:'40%',}}
-	
-	>
+    <div  style={{marginTop:'-4.6%',paddingLeft:'35%',}}
+	buttonstyle={{heigth:'40%',}}>
 	<RaisedButton onClick={this.writeState}
 	primary={true}    
 	label ="Ask" />
 	
-	</div>
+	</div>     
+		
 </div>
-  
- 
-
+<div style={{paddingTop:'50px' ,}}>
+<Paper style = {{height:'100px' , width:'100%' ,display: 'inline-block',marginBottom:'20px',}} zDepth={1} rounded={false}>
+	 <div style={{color:'blue' , fontSize:'20px'}}>Your Answer</div>
+	 <div style={{textAlign:'centre', fontSize: '18px', color:"black",}}><h6 id="hello"></h6> </div>
+	</Paper>
+	</div>
  </div>
 			
 	 );
