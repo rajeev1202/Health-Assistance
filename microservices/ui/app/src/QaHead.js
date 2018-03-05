@@ -9,11 +9,11 @@ import {    grey50, grey200, grey300, grey400, grey900, indigoA700, blueA700, bl
        } from 'material-ui/styles/colors';
 	  
 import Paper from 'material-ui/Paper';
-	  
-	  
+
 	  
 	  const style = {
-backgroundColor:'grey', 
+backgroundImage:'logo.svg', 
+backgroundColor : 'black' ,
  height: '380px',
   width:'100%',
   marginTop:'54px',
@@ -27,27 +27,31 @@ backgroundColor:'grey',
 	{
 		return(
 		
-	 <div style={{ height:60,backgroundColor:'#009688'}}>
+	 <div style={{ height:60,backgroundColor:'#FFCC80'}}>
     <Tabs style={{ height:'20%',width:'20%',
 
-    }}  tabItemContainerStyle={{backgroundColor:'#009688'}}
+    }}  tabItemContainerStyle={{backgroundColor:'#FFCC80'}}
       inkBarStyle={{color:'orange',background: '#00aced'}} style={{marginLeft:'40px',marginTop:'', height:'10%',width:'30%',
 
       }} >
 	
-        <Tab  buttonStyle={{color:'black'}} label="Home" value="a"
+        <Tab  buttonStyle={{color:'blue'}} label="Home" value="a"
         style={{textTransform: "none"}}>
       </Tab>
-      <Tab  buttonStyle={{color:'black'}} label="About Us" value="b"
+      <Tab  buttonStyle={{color:'blue'}} label="About Us" value="b"
         style={{textTransform: "none"}}>
       </Tab>
-      <Tab style={{textTransform: "none"}} buttonStyle={{color:'black'}} label="Contact" value="c">
+      <Tab style={{textTransform: "none"}} buttonStyle={{color:'blue'}} label="Contact" value="c">
 
       </Tab>
   
   </Tabs>  
-	 <Paper style={style} zDepth={1} rounded={false} />
-		
+	 <Paper style={style}  zDepth={1} rounded={false}>
+	 <div style={{textAlign:'centre', fontSize: '100px', color:"white",}}>Health Assistant Bot</div>
+	 <a style = {{fontSize :'60px',fontFamily:'cursive',color:'white',}}> Get  your all Health Answers </a>
+	 
+	 </Paper>
+	
 	</div>	
 		
 		
