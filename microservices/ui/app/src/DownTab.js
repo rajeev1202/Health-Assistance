@@ -14,7 +14,6 @@ import FlatButton from 'material-ui/FlatButton';
 import axios from "axios";
 import Paper from 'material-ui/Paper';
 	
-	
 	export class DownTab extends React.Component {
 		constructor(){
 		super();
@@ -48,9 +47,17 @@ import Paper from 'material-ui/Paper';
 		 .then(response => {
 			  console.log(response.data);
 			  var rr = JSON.stringify(response.data);
-			  
+			  var str = rr.replace("{\"Response\":","");
+			  var str1 =str.replace("\"}","");
+			  var str1 =str1.replace("\"","");
 			 
-			 document.getElementById("hello").innerHTML=rr;
+			
+			 if( str1 =="Intent unrecognised")
+			 {
+				   str1="Type your query";
+			 }
+			 document.getElementById("hello").innerHTML=str1;
+			 
 		
 			 
 			 this.setstate({line: response.data});
@@ -72,10 +79,10 @@ import Paper from 'material-ui/Paper';
 			 
 			
 			
-			<div style={{ hight:60,backgroundColor:'#80CBC4',}} >
+			<div style={{ hight:60,backgroundColor:'#FFCC80',}} >
     <div
 	 containerStyle={{backgroundColor:'orange'}}
-      InkBarStyle={{color:'orange',background: '#00aced'}} style={{paddingTop:'8px',marginLeft:'20px',marginTop:'375px', height:'5%',width:'30%',background:'',}} >
+      InkBarStyle={{color:'orange',background: '#1DE9B6'}} style={{paddingTop:'8px',marginLeft:'20px',marginTop:'375px', height:'5%',width:'30%',background:'',}} >
 	
         < FlatButton buttonStyle={{color:'black'}} label="Topics" value="a"
         style={{textTransform: "none",color:''}}/>
@@ -107,7 +114,7 @@ maxWidth: '100%',height:'35px',paddingLeft:'100px',}}/>
 <div style={{paddingTop:'50px' ,}}>
 <Paper style = {{height:'100px' , width:'100%' ,display: 'inline-block',marginBottom:'20px',}} zDepth={1} rounded={false}>
 	 <div style={{color:'blue' , fontSize:'20px'}}>Your Answer</div>
-	 <div style={{textAlign:'centre', fontSize: '18px', color:"black",}}><h6 id="hello"></h6> </div>
+	 <div style={{textAlign:'centre', fontSize: '20px',}}><h3 id="hello"></h3> <p id="hello1"></p></div>
 	</Paper>
 	</div>
  </div>
