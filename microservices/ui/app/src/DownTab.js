@@ -113,7 +113,7 @@ maxWidth: '100%',height:'35px',paddingLeft:'100px',}}/>
 </div>
 <div style={{paddingTop:'50px' ,}}>
 <Paper style = {{height:'100px' , width:'100%' ,display: 'inline-block',marginBottom:'20px',}} zDepth={1} rounded={false}>
-	 <div style={{color:'blue' , fontSize:'20px'}}>Your Answer</div>
+	 <div style={{color:'orange' , fontSize:'20px' , fontFamily:'Courier' , fontSize:'20px'}}><b>Your Answer</b></div>
 	 <div style={{textAlign:'centre', fontSize: '20px',}}><h3 id="hello"></h3> <p id="hello1"></p></div>
 	</Paper>
 	</div>
