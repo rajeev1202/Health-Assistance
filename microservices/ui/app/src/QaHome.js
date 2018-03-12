@@ -16,7 +16,7 @@ export class QaHome extends React.Component{
 		<div>
 		<QaHead/>
 		<DownTab/>
-		<DownPage/>
+	
 		
 		
 		</div>
