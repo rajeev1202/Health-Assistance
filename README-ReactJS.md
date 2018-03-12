@@ -39,13 +39,14 @@ Find complete documentation [here](https://docs.hasura.io/0.15/manual/tutorial/2
 
 3.Then run
 ```
-$  hasura quickstart hasura/hello-react
+$  hasura quickstart <our quickstart name>
 
 ```
- or u can clone and deploy it from [here](https://hasura.io/hub/project/hasura/hello-react/deployment-instructions) .
+ or u can clone and deploy it from [here](give our quistart link man) .
  
- 4.Then copy then go to /microservices/ui/app/src and replace it by code present in /microservices/ui/app/src if this Repository
-   I will soon provide Quickstart for this project .
+ 4.To make changes to the project, go to /microservices/ui/app/src and add your code files .
+
+To commit the changes, and perform ```git push hasura master``` to deploy the changes.
 
 5.Now Run
   ```
