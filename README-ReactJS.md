@@ -42,17 +42,14 @@ Find complete documentation [here](https://docs.hasura.io/0.15/manual/tutorial/2
 $  hasura quickstart <our quickstart name>
 
 ```
- or u can clone and deploy it from [here](give our quistart link man) .
+ or u can clone and deploy it from [here](give our quickstart link ) .
  
- 4.To make changes to the project, go to /microservices/ui/app/src and add your code files .
-
-To commit the changes, and perform ```git push hasura master``` to deploy the changes.
 
 5.Now Run
   ```
   git add .
-  git commit  and 
-  git push hasura master.
+  git commit  and  // To commit the changes  
+  git push hasura master. // To deploy the changes
   ```
   
 6. Run ``` hasura cluster status  ```to find your cluster name.
