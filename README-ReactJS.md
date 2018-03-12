@@ -39,10 +39,10 @@ Find complete documentation [here](https://docs.hasura.io/0.15/manual/tutorial/2
 
 3.Then run
 ```
-$  hasura quickstart <our quickstart name>
+$  hasura quickstart Rajeev/Health-Assistant Bot
 
 ```
- or u can clone and deploy it from [here](give our quickstart link ) .
+ or u can clone and deploy it from [here](https://hasura.io/hub/projects/Rajeev/Health-Assistant-Bot ) .
  
 
 5.Now Run
